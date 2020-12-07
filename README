@@ -1,0 +1,24 @@
+The data that these repositories help analyze is in the form of an ASCII file
+with pixel data for a grayscale movie.
+
+Repo Descriptions
+-----------------
+
+O. bg_info, part_data: these contain data required for various calculations
+    --> bg_info gives the background calculations done to find the best fit
+        curve to model background noise
+    --> part_data is a mixture of data gathered from the images, and then
+        analysis done for individual particles
+
+I. shift: contains method for finding the allignment equation between the 2
+          spectral bands
+          
+II. get_boxes_raw: utilizes a c++ generated executable to calculate the 
+                   intensities in specified regions. These regions of 
+                   interest are used to get the brightness ratios
+
+III. get_T: convert the ratio data into temperature data
+
+IV. process_T: analyze the temperature data; perhaps the most illuminating
+                graph is the number of particles required for the mean error
+                to be less than 2 deg Celsius vs. the number of frames
